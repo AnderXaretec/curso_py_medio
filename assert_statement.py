@@ -7,7 +7,7 @@ def divisors(num):
 def run():
     # for i in range(1, 100):
     num = input("Ingresa un numero: ")
-    assert num.isnumeric(),  "Solo puedes ingresar numeros"
+    assert num.isnumeric(), "Solo puedes ingresar numeros"
         # assert num != abs(int(num)), "No puedes ingresar numeros negativos"
     list_1 = divisors(int(num))
     print("Tu numero tiene ", list_1[0], """ divisores y son los siguientes:
