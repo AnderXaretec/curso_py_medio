@@ -25,7 +25,6 @@ def read():
 #funcion principal del juego
     charlist = ["_" for z in range(1, len(selword))]#crea lista llena de tantos _ como caract tiene la palabra elegida    
     acepts = 1
-    
     for z in range(1, 10):
         selchar = input("Inserta una letra: ")
         
@@ -39,13 +38,13 @@ def read():
             i += 1
         if acepts == len(selword):
             print("Has ganado!! la palabra es: ", selword)
-            break
+            exit()
                 # print("_")        
         # time.sleep(3)
         os.system("cls")
         print(charlist)
     print("Fallaste. La palabra es: ", selword)
-
+    exit()
 
 #metodo2(list compr):
 
