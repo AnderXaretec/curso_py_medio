@@ -1,5 +1,6 @@
 from re import I
 import random
+from tracemalloc import stop
 from unittest import result
 import time
 import os
@@ -23,6 +24,8 @@ def read():
 
 #funcion principal del juego
     charlist = ["_" for z in range(1, len(selword))]#crea lista llena de tantos _ como caract tiene la palabra elegida    
+    acepts = 1
+    
     for z in range(1, 10):
         selchar = input("Inserta una letra: ")
         
@@ -32,13 +35,16 @@ def read():
             if selchar == char:
                 # print(char)
                 charlist[i - 1] = char
-                # print("_")
+                acepts += 1
             i += 1
+        if acepts == len(selword):
+            print("Has ganado!! la palabra es: ", selword)
+            break
+                # print("_")        
         # time.sleep(3)
         os.system("cls")
         print(charlist)
-            
-
+    print("Fallaste. La palabra es: ", selword)
 
 
 #metodo2(list compr):
