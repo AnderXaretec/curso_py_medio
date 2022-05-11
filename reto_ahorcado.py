@@ -18,14 +18,15 @@ def read():
         # words = {"Word": word for word in f}#dict comprenhensions - pendiente continuar
     
         words = [word for word in f]#list compr.- crea lista con todas las palabras
-        randnum = random.randint(1, len(words))#elige un num al azar entre 1 y la cantidad de palabras que haya
-        selword = words[int(randnum)]#selecciona la palabra en la posicion del num aleatorio elegido antes
+        # randnum = random.randint(1, len(words))#elige un num al azar entre 1 y la cantidad de palabras que haya
+        selword = words[int(random.randint(1, len(words)))]#selecciona la palabra en la posicion del num aleatorio elegido antes
         # return selword
 
 #funcion principal del juego
     charlist = ["_" for z in range(1, len(selword))]#crea lista llena de tantos _ como caract tiene la palabra elegida    
     acepts = 1
-    for z in range(1, 10):
+    for z in range(1, 11):
+        print("Te quedan ", 11 - z, " vidas")
         selchar = input("Inserta una letra: ")
         
 #metodo1 - listas y for con slices:
